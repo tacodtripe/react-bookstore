@@ -1,0 +1,76 @@
+p {
+  margin: 0 !important;
+}
+
+button {
+  color: white;
+  background-color: #0290ff;
+  border: none;
+  border-radius: 3px !important;
+  font-family: RobotoSlab, serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+
+  /* width: 11.5rem; */
+  height: 2.063rem;
+  margin: 0.75rem 0 0.563rem 3.688rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+}
+
+.bookGenre {
+  color: #707070;
+  font-family: Montserrat, serif;
+  font-weight: bold;
+}
+
+.bookTitle {
+  font-family: RobotoSlab, serif;
+  font-weight: bold;
+  font-size: 1.375rem;
+}
+
+.bookAuthor {
+  font-family: RobotoSlab, serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+}
+
+.removeButton {
+  cursor: pointer;
+}
+
+.bookProgressContainer {
+  width: 5.625rem;
+  height: 5.62rem;
+  padding: 0.62rem 0;
+}
+
+.bookProgress {
+  width: 4.25rem;
+  height: 4.25rem;
+  background: linear-gradient(white, white) padding-box, linear-gradient(to right, gainsboro 0% 49%, #379af3 50%) border-box;
+  border-radius: 50em;
+  border: 4px solid transparent;
+}
+
+.progressNumber {
+  font-family: Montserrat, serif;
+  font-size: 2rem;
+}
+
+.progressNumber ~ span {
+  color: #707070;
+  opacity: 0.5;
+  font-family: Montserrat, serif;
+  font-size: 0.875rem;
+}
+
+.currentChapter {
+  opacity: 0.5;
+  font-family: RobotoSlab, serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  color: #707070;
+}
