@@ -1,5 +1,7 @@
 import './App.css';
-import { Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
+import Books from './redux/books/books';
+import Categories from './redux/categories/categories';
 
 function App() {
   return (
@@ -14,6 +16,10 @@ function App() {
           <i className="col-1 bi bi-person-fill" />
         </nav>
       </div>
+      <Routes>
+        <Route path="/" element={<Books />} />
+        <Route path="categories" element={<Categories />} />
+      </Routes>
     </div>
   );
 }
