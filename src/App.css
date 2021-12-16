@@ -1,39 +1,25 @@
-.App {
-  text-align: center;
+nav {
+  background-color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  font-family: Montserrat, serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: rgb(10 147 255);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.appLink {
+  font-family: Montserrat, serif;
+  text-decoration: none;
+  letter-spacing: 1.9px;
+  color: rgb(20, 20, 20);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.appLink:hover {
+  color: rgb(8, 94, 160);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.bi-person-fill {
+  color: rgb(10 147 255);
 }
