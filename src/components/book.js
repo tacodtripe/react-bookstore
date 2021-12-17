@@ -2,7 +2,7 @@ import './book.css';
 
 export default function Book() {
   return (
-    <div className="col-12 row bookContainer my-2">
+    <div className="col-12 col-sm-11 row bookContainer my-2 bg-to-white">
       <div className="col-4 col-md-4">
         <p className="bookGenre">Action</p>
         <p className="bookTitle">The Hunger Games</p>

@@ -1,5 +1,15 @@
-nav {
+.bottom-border {
+  border-bottom: solid 1px gainsboro;
+}
+
+.bg-to-white {
   background-color: #fff;
+}
+
+.appContainer {
+  background-color: ghostwhite;
+  box-shadow: 0 0 60px 0 #979797;
+  padding-bottom: 3rem;
 }
 
 .logo {
@@ -20,6 +30,6 @@ nav {
   color: rgb(8, 94, 160);
 }
 
-.bi-person-fill {
+.bi-person-circle {
   color: rgb(10 147 255);
 }
