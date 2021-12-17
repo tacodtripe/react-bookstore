@@ -2,7 +2,7 @@ import './book.css';
 
 export default function Book() {
   return (
-    <div className="row">
+    <div className="row bookContainer">
       <div className="col-4 col-md-4">
         <p className="bookGenre">Action</p>
         <p className="bookTitle">The Hunger Games</p>
@@ -13,19 +13,19 @@ export default function Book() {
           <span className="bookAuthor">Edit</span>
         </div>
       </div>
-      <div className="col-4 col-md-4 d-flex">
+      <div className="col-4 col-md-4 d-flex justify-content-center border-end">
         <div className="bookProgressContainer">
           <div className="bookProgress" />
         </div>
-        <div>
+        <div className="d-flex flex-column justify-content-center">
           <p className="progressNumber">50%</p>
           <span>Completed</span>
         </div>
       </div>
-      <div className="col-4 col-md-4">
-        <p className="currentChapter">CURRENT CHAPTER</p>
-        <p>Chapter 17</p>
-        <button type="button">UPDATE PROGRESS</button>
+      <div className="col-4 col-md-4 row justify-content-center">
+        <p className="col-10 currentChapter">CURRENT CHAPTER</p>
+        <p className="col-10 ">Chapter 17</p>
+        <button className="align-self-end col-10" type="button">UPDATE PROGRESS</button>
       </div>
     </div>
   );
