@@ -1,0 +1,35 @@
+.bottom-border {
+  border-bottom: solid 1px gainsboro;
+}
+
+.bg-to-white {
+  background-color: #fff;
+}
+
+.appContainer {
+  background-color: ghostwhite;
+  box-shadow: 0 0 60px 0 #979797;
+  padding-bottom: 3rem;
+}
+
+.logo {
+  font-family: Montserrat, serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: rgb(10 147 255);
+}
+
+.appLink {
+  font-family: Montserrat, serif;
+  text-decoration: none;
+  letter-spacing: 1.9px;
+  color: rgb(20, 20, 20);
+}
+
+.appLink:hover {
+  color: rgb(8, 94, 160);
+}
+
+.bi-person-circle {
+  color: rgb(10 147 255);
+}

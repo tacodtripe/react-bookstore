@@ -1,0 +1,8 @@
+{
+  "presets": [
+    ["@babel/preset-react", {
+    "target": "es6"
+  }]
+  ],  
+  "plugins": ["@babel/plugin-syntax-jsx"]
+}
