@@ -2,6 +2,10 @@
 
 Web application that uses React and Redux to keep track of a collection of books.
 
+## Live demo
+
+[here](https://tacodtripe-react-bookstore.netlify.app/)
+
 ## Built With
 
 - Javascript
