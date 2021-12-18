@@ -17,9 +17,9 @@ const Book = (props) => {
         <p className="bookTitle">{title}</p>
         <p className="bookAuthor pb-2">Suzanne Collins</p>
         <div className="d-flex justify-content-between w-50">
-          <span className="bookAuthor">Comments</span>
+          <span className="bookAuthor pe-1">Comments</span>
           <button onClick={() => remove(id)} type="button" className="bookAuthor removeButton px-1">Remove</button>
-          <span className="bookAuthor">Edit</span>
+          <span className="bookAuthor ps-1">Edit</span>
         </div>
       </div>
       <div className="col-4 col-md-4 d-flex justify-content-center border-end">
