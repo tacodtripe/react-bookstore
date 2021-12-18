@@ -1,11 +1,15 @@
+/* eslint-disable no-unused-vars */
+import PropTypes from 'prop-types';
 import './book.css';
 
-export default function Book() {
+export default function Book(props) {
+  const { id, title, category } = props;
+
   return (
     <div className="col-12 col-sm-11 row bookContainer my-2 bg-to-white">
       <div className="col-4 col-md-4">
-        <p className="bookGenre">Action</p>
-        <p className="bookTitle">The Hunger Games</p>
+        <p className="bookGenre">{category}</p>
+        <p className="bookTitle">{title}</p>
         <p className="bookAuthor pb-2">Suzanne Collins</p>
         <div className="d-flex justify-content-between w-50">
           <span className="bookAuthor">Comments</span>
@@ -30,3 +34,9 @@ export default function Book() {
     </div>
   );
 }
+
+Book.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+};
