@@ -15,6 +15,30 @@ export const removeBook = (payload) => ({
   payload,
 });
 
+export const fetchBooks = () => async (dispatch) => {
+  await fetch(baseUrl)
+    .then((res) => res.json())
+    .then((data) => {
+      const fetchCollection = [];
+      Object.entries(data).forEach((entry) => {
+        const key = entry[0];
+        const value = entry[1];
+        const book = { id: `${key}`, title: value[0].title, category: value[0].title };
+        fetchCollection.push(book);
+      });
+      fetchCollection.forEach((e) => {
+        dispatch({
+          type: ADD_BOOK,
+          payload: {
+            id: e.id,
+            title: e.title,
+            category: e.category,
+          },
+        });
+      });
+    });
+};
+
 export const postBook = ({ id, title, category }) => async (dispatch) => {
   await fetch(baseUrl, {
     method: 'POST',
