@@ -24,19 +24,27 @@ export default function AddBookForm() {
   };
 
   const onSubmit = () => {
-    const newBook = {
-      id: bookId(),
-      title,
-      category,
-    };
-    dispatch(addBook(newBook));
+    if (title && category) {
+      const newBook = {
+        id: bookId(),
+        title,
+        category,
+      };
+      dispatch(addBook(newBook));
+      const inputTitle = document.querySelector('.inputTitle');
+      const inputCategory = document.querySelector('.inputCategory');
+      inputTitle.value = '';
+      inputCategory.value = '';
+      setCategory('');
+      setTitle('');
+    }
   };
 
   return (
     <form className="col-11 row justify-content-center justify-content-md-between" onSubmit={handleSubmit(onSubmit)}>
       <p className="col-12">ADD A NEW BOOK</p>
-      <input className="col-10 col-md-4 my-1" placeholder="Book Title" {...register('title', { required: true })} onChange={handleTitleChange} />
-      <input className="col-10 col-md-4 my-1" placeholder="Category" {...register('category', { required: true })} onChange={handleCategoryChange} />
+      <input className="col-10 col-md-4 my-1 inputTitle" placeholder="Book Title" {...register('title', { required: true })} onChange={handleTitleChange} />
+      <input className="col-10 col-md-4 my-1 inputCategory" placeholder="Category" {...register('category', { required: true })} onChange={handleCategoryChange} />
       <input className="col-4 col-md-2 my-1 submitButton" type="submit" value="ADD BOOK" />
       {errors.title && <span className="col-10 col-md-4 text-center">Title is required</span>}
       {errors.category && <span className="col-10 col-md-4 text-center">Category is required</span>}

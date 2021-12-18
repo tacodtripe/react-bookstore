@@ -17,11 +17,6 @@ button {
   padding: 0.438rem 1.188rem 0.5rem 1.375rem;
 }
 
-span.bookAuthor:nth-of-type(2) {
-  border-left: solid 1px gainsboro;
-  border-right: solid 1px gainsboro;
-}
-
 .bg-to-white {
   background-color: #fff;
 }
@@ -51,7 +46,12 @@ span.bookAuthor:nth-of-type(2) {
 }
 
 .removeButton {
-  cursor: pointer;
+  padding: 0 !important;
+  background-color: white !important;
+  letter-spacing: 0 !important;
+  border-left: solid 1px gainsboro;
+  border-right: solid 1px gainsboro;
+  height: 18px;
 }
 
 .bookProgressContainer {

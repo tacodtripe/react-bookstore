@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars, jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions, max-len */
 import PropTypes from 'prop-types';
 import './book.css';
 import { useDispatch } from 'react-redux';
@@ -18,7 +17,7 @@ export default function Book(props) {
         <p className="bookAuthor pb-2">Suzanne Collins</p>
         <div className="d-flex justify-content-between w-50">
           <span className="bookAuthor">Comments</span>
-          <span onClick={() => remove(id)} className="bookAuthor removeButton px-1">Remove</span>
+          <button onClick={() => remove(id)} type="button" className="bookAuthor removeButton px-1">Remove</button>
           <span className="bookAuthor">Edit</span>
         </div>
       </div>
