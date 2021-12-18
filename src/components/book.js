@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import './book.css';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { deleteBook, removeBook } from '../redux/books/books';
 
-export default function Book(props) {
+const Book = (props) => {
   const { id, title, category } = props;
   const dispatch = useDispatch();
   const remove = (book) => {
     dispatch(removeBook(book));
+    dispatch(deleteBook(book));
   };
   return (
     <div className="col-12 col-sm-11 row bookContainer my-2 bg-to-white">
@@ -37,10 +38,12 @@ export default function Book(props) {
       </div>
     </div>
   );
-}
+};
 
 Book.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
 };
+
+export default Book;

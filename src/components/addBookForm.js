@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { v4 as bookId } from 'uuid';
-import { addBook } from '../redux/books/books';
+import { postBook } from '../redux/books/books';
 import './addBookForm.css';
 
-export default function AddBookForm() {
+const AddBookForm = () => {
   const {
     register, handleSubmit, formState: { errors },
   } = useForm();
@@ -30,7 +30,7 @@ export default function AddBookForm() {
         title,
         category,
       };
-      dispatch(addBook(newBook));
+      dispatch(postBook(newBook));
       const inputTitle = document.querySelector('.inputTitle');
       const inputCategory = document.querySelector('.inputCategory');
       inputTitle.value = '';
@@ -51,4 +51,6 @@ export default function AddBookForm() {
       {errors.category && <span className="d-none d-md-block col-md-1 " />}
     </form>
   );
-}
+};
+
+export default AddBookForm;
