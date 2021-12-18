@@ -1,10 +1,15 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable no-unused-vars, jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions, max-len */
 import PropTypes from 'prop-types';
 import './book.css';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
 
 export default function Book(props) {
   const { id, title, category } = props;
-
+  const dispatch = useDispatch();
+  const remove = (book) => {
+    dispatch(removeBook(book));
+  };
   return (
     <div className="col-12 col-sm-11 row bookContainer my-2 bg-to-white">
       <div className="col-4 col-md-4">
@@ -13,7 +18,7 @@ export default function Book(props) {
         <p className="bookAuthor pb-2">Suzanne Collins</p>
         <div className="d-flex justify-content-between w-50">
           <span className="bookAuthor">Comments</span>
-          <span className="bookAuthor removeButton px-1">Remove</span>
+          <span onClick={() => remove(id)} className="bookAuthor removeButton px-1">Remove</span>
           <span className="bookAuthor">Edit</span>
         </div>
       </div>

@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-props-no-spreading, no-console, no-unused-vars */
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
