@@ -3,7 +3,7 @@ import './book.css';
 import { useDispatch } from 'react-redux';
 import { deleteBook, removeBook } from '../redux/books/books';
 
-export default function Book(props) {
+const Book = (props) => {
   const { id, title, category } = props;
   const dispatch = useDispatch();
   const remove = (book) => {
@@ -38,10 +38,12 @@ export default function Book(props) {
       </div>
     </div>
   );
-}
+};
 
 Book.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
 };
+
+export default Book;

@@ -6,7 +6,7 @@ import { v4 as bookId } from 'uuid';
 import { postBook } from '../redux/books/books';
 import './addBookForm.css';
 
-export default function AddBookForm() {
+const AddBookForm = () => {
   const {
     register, handleSubmit, formState: { errors },
   } = useForm();
@@ -51,4 +51,6 @@ export default function AddBookForm() {
       {errors.category && <span className="d-none d-md-block col-md-1 " />}
     </form>
   );
-}
+};
+
+export default AddBookForm;
