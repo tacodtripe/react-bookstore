@@ -5,10 +5,12 @@ import AddBookForm from './addBookForm';
 
 export default function BookList() {
   const books = useSelector((state) => state.booksReducer);
-  if (books.length === 0) {
-    const dispatch = useDispatch();
-    dispatch(fetchBooks());
-  }
+  setTimeout(() => {
+    if (books.length === 0) {
+      const dispatch = useDispatch();
+      dispatch(fetchBooks());
+    }
+  }, 1000);
   return (
     <main className="row justify-content-center px-1">
       {books.map((e) => (

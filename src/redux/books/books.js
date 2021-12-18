@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const baseUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/lNAKqYwGDWCLMivBOc9l/books/';
@@ -64,6 +63,18 @@ export const postBook = ({ id, title, category }) => async (dispatch) => {
         });
       }
     });
+};
+
+export const deleteBook = (id) => async () => {
+  await fetch(`${baseUrl}${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify({
+      item_id: id,
+    }),
+  });
 };
 
 const reducer = (state = initialState, action) => {
