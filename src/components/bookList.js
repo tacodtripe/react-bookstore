@@ -4,10 +4,10 @@ import Book from './book';
 import AddBookForm from './addBookForm';
 
 export default function BookList() {
+  const dispatch = useDispatch();
   const books = useSelector((state) => state.booksReducer);
   setTimeout(() => {
     if (books.length === 0) {
-      const dispatch = useDispatch();
       dispatch(fetchBooks());
     }
   }, 1000);
